@@ -1,18 +1,36 @@
 <html><head>
 <meta charset="utf-8"/>
 <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
-<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Noto+Sans:wght@400;500;700;900" onload="this.rel='stylesheet'" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
 <title>Stitch Design</title>
 <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #3A86FF;
+        --secondary-color: #F6F6F6;
+      }
+      .hamburger-menu {
+        display: none;
+      }
+      @media (max-width: 1024px) {
+        .desktop-nav {
+          display: none;
+        }
+        .hamburger-menu {
+          display: flex;
+        }
+      }
+    </style>
 </head>
-<body class="bg-gray-50">
-<div class="relative flex size-full min-h-screen flex-col bg-gray-50 group/design-root overflow-x-hidden" style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
+<body class="bg-[var(--secondary-color)] text-gray-800" style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
+<div class="relative flex size-full min-h-screen flex-col overflow-x-hidden group/design-root">
 <div class="layout-container flex h-full grow flex-col">
-<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 px-10 py-4">
-<div class="flex items-center gap-3 text-gray-900">
-<svg class="h-8 w-8 text-rose-500" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 px-6 md:px-10 py-4 bg-white">
+<div class="flex items-center gap-3">
+<div class="size-8 text-[var(--primary-color)]">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_6_319)">
 <path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
 </g>
@@ -20,75 +38,63 @@
 <clipPath id="clip0_6_319"><rect fill="white" height="48" width="48"></rect></clipPath>
 </defs>
 </svg>
-<h2 class="text-gray-900 text-xl font-bold leading-tight tracking-[-0.015em]">Portfolio</h2>
 </div>
-<div class="flex items-center gap-6">
-<nav class="flex items-center gap-8">
-<a class="text-gray-600 hover:text-rose-500 text-base font-medium leading-normal transition-colors" href="index.html">About me</a>
-<a class="text-rose-500 text-base font-medium leading-normal" href="career.html">Career</a>
-<a class="text-gray-600 hover:text-rose-500 text-base font-medium leading-normal transition-colors" href="contact.html">Contact</a>
+<h2 class="text-xl font-bold tracking-tight">John Doe</h2>
+</div>
+<div class="flex items-center gap-4">
+<nav class="desktop-nav hidden lg:flex items-center gap-6 text-sm font-medium">
+<a class="hover:text-[var(--primary-color)] transition-colors" href="#">Home</a>
+<a class="hover:text-[var(--primary-color)] transition-colors" href="#">About</a>
+<a class="hover:text-[var(--primary-color)] transition-colors" href="#">Projects</a>
+<a class="text-[var(--primary-color)] font-semibold" href="#">Career</a>
+<a class="hover:text-[var(--primary-color)] transition-colors" href="#">Contact</a>
 </nav>
-<button class="flex items-center justify-center rounded-full h-10 w-10 bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-gray-900 transition-colors">
-<span class="material-symbols-outlined text-2xl"> language </span>
+<div class="hidden lg:block bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAUt-b8g2xgi5vfSvhXBldZDpgjjG1UV3eiJSveasbTetGx1lkrbbK2MurVDcMSdXpKVfkXNpeTFjWiadU-oNt2BfnIli8O7HR-QDbfBVmXIrDtbftw-MjQG3Yl4vwZkRgCDLAlmYvRX5tCEuvCiHAqKI3ElBLyul3KbGmGCSIzY8ZpT1k_ZLMBNpXFJ7Ffe5PkvMPxFECgC1nTZ55LmT3zVTSuNgVCoYZbdXj76dVp29K4T34dVJBfONiY52PdN38K1-GwpTjG3D_Q");'></div>
+<button class="hamburger-menu lg:hidden flex items-center justify-center rounded-md h-10 w-10 bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors">
+<span class="material-symbols-outlined">menu</span>
 </button>
-<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 border-2 border-white shadow-md" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDmImI1sVx5Jg2D_XT0b6WDA2KR9eZ7ct2wnG2-2_EKh2z1X67nHACD2X_Rjd0COnCzW990_zjlHBVzJbYIksJiDzSqWq486fWFaTIO2tRIUZqNviBBIE1nQk_UmSWKxCpdvjkcl2zU_nqA-_33WPFSlG1px_wANZn2C86ZDsJLVEZuIkKhDU20tFKR1631imYU921G3M9G_zKNeCrprsCaD64Rf75Zt8eNYgDKcowLOHj5vJ8agQMEXhmGG6XBjHmmhOaIBDfFtiIX");'></div>
 </div>
 </header>
-<main class="flex-1 px-10 py-12 md:px-20 lg:px-40">
-<div class="mx-auto max-w-4xl">
-<h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl mb-12">My Career Journey</h1>
-<div class="space-y-16">
-<div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-start group">
-<div class="md:col-span-2">
-<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAl7Q77MLg3dti5snna2UyzZ2_k5DLLMZrQqmLbHM0j9DBFFW9heoqtaxnEFY2cEN8HPa-dPBCns9CX0UueZb3JUJQ1LiGjJ269qqs03dMr8vxwwOXL_x33gc_jFPb-ANXrV-v2yWGq4C1dXATo5neUzaePtIIf5F-x3xIzOaDG3tssjSzN1v5iOfg28MjaAbupM5SN_q0syT870XM9oz9ePvgx4AnMht1cPPBhuuPN4gmG3Pc6QzhpMFGeiPVV-bnMBZSp1FDum_jh");'></div>
+<main class="flex-1 px-4 sm:px-6 lg:px-10 py-8">
+<div class="max-w-7xl mx-auto">
+<h1 class="text-4xl font-bold tracking-tighter mb-8">Career Journey</h1>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="flex flex-col bg-white rounded-lg shadow-sm overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group">
+<div class="relative w-full aspect-video">
+<img alt="Tech Innovators Inc. office" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmqc1QZ5X-xYo4ygwCfuydAUHbLreDmnLUM437cut3jKlzhbo0r0LNDW6enxwZarF4WQA6oYpnM8t8S08k6aySJm2RZ6qiVwDMoC9x5lbTHU-xEY68-KP63c-XJOpMZ6v_ujAmm0rP0ZPXLK-ne9yZe_eNoYU5Uo8deh1xS7aEXWJY2ZtpmuQIvY1LnwJA-TwRwyEoLSuNgy-TFKWpVQ362G-aP4cLJ2FwzTVT7e7oLUS9a2ddSXDWwKsMGR9eAgZDEo5e38ojpW06"/>
 </div>
-<div class="md:col-span-3 flex flex-col gap-4">
-<div>
-<p class="text-rose-500 font-semibold leading-normal mb-1">2020 - Present</p>
-<h3 class="text-2xl font-bold text-gray-900 leading-tight">Senior Product Designer at Tech Innovators Inc.</h3>
-<p class="text-gray-600 text-base leading-relaxed mt-2">
-                      Led design for a new mobile app, resulting in a 20% increase in user engagement. Collaborated with cross-functional teams to deliver user-centered solutions.
-                    </p>
-</div>
-<a class="flex items-center gap-2 text-rose-500 font-bold leading-normal w-fit group/button" href="#">
-<span>Read More</span>
-<span class="material-symbols-outlined transition-transform duration-300 group-hover/button:translate-x-1"> arrow_forward </span>
+<div class="p-6 flex flex-col flex-1">
+<h3 class="text-lg font-semibold mb-2">Software Engineer at Tech Innovators Inc.</h3>
+<p class="text-gray-600 text-sm mb-4 flex-1">Developed and maintained web applications using modern technologies, contributing to major product launches.</p>
+<a class="inline-flex items-center gap-2 text-sm font-semibold text-[var(--primary-color)] group-hover:underline" href="#">
+                    Read More
+                    <span class="material-symbols-outlined text-base">arrow_forward</span>
 </a>
 </div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-start group">
-<div class="md:col-span-2 md:order-2">
-<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCDP8OV-HKRL-_nBmKfrp3SIseBxowf6VmPdN-6lPIGVzF0Sg35QQ6oHWsRNVREqBDO1_t_vuhNB4UaT8pGbG38PGr3UYAh3XKAxeglKpR_954CeRxtBTSbeiNqGxK_nDzz86IIHEb3cKmRRJltpQe13rn0T4GpKYmCWAJxuBl7mDfEs7vRfSgY5qJwsRS1WpHKPl2qebMed9YpOAiV9plN6DcPbOjFyg_GH8A05PgQP-yvVhwPnsv8d8mukVzzYIGzgUjRfKuvtypy");'></div>
+<div class="flex flex-col bg-white rounded-lg shadow-sm overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group">
+<div class="relative w-full aspect-video">
+<img alt="Web Solutions Co. workspace" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNatMuDrO1HSD7188nOSJaeM9GlNwABynec1_z3vaB702e6VeQiFC1_TPV0HUnbOMYRBRzKwLsqjUTVT02SB-RcRB41bGgA7I6gyMxViq44QYqcz4nIMPh_ZZBKgei1HS93uEJTh3-9p7YpNYSUFXsePjqG9Zqh0iqgsTCnQEYrObq7E5XBnXkFUc56x4K7tZiVIz36knQEHkhlO0QmioMP8gDVQPHgnR6aUe5Kl2NOwqs79w6Q-_5MjQt_83XgGP_3z3FW2373X0q"/>
 </div>
-<div class="md:col-span-3 md:order-1 flex flex-col gap-4">
-<div>
-<p class="text-rose-500 font-semibold leading-normal mb-1">2018 - 2020</p>
-<h3 class="text-2xl font-bold text-gray-900 leading-tight">Product Designer at Creative Solutions Co.</h3>
-<p class="text-gray-600 text-base leading-relaxed mt-2">
-                      Designed and launched a web platform that improved user satisfaction by 15%. Conducted user research and usability testing to inform design decisions.
-                    </p>
-</div>
-<a class="flex items-center gap-2 text-rose-500 font-bold leading-normal w-fit group/button" href="#">
-<span>Read More</span>
-<span class="material-symbols-outlined transition-transform duration-300 group-hover/button:translate-x-1"> arrow_forward </span>
+<div class="p-6 flex flex-col flex-1">
+<h3 class="text-lg font-semibold mb-2">Frontend Developer at Web Solutions Co.</h3>
+<p class="text-gray-600 text-sm mb-4 flex-1">Built responsive and interactive user interfaces for various web platforms, enhancing user experience and engagement.</p>
+<a class="inline-flex items-center gap-2 text-sm font-semibold text-[var(--primary-color)] group-hover:underline" href="#">
+                    Read More
+                    <span class="material-symbols-outlined text-base">arrow_forward</span>
 </a>
 </div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-start group">
-<div class="md:col-span-2">
-<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBgNT0g1_xjuTxWc3BP9d7ZrBmVBsS18EvGddc9gdFd_fKGdXHuPgIHQ3vALZK1f6nn9OL9PRvvF9xC4BiDdEBmdXgop-FN7x2KXzM47zXGccWYc8FLrx_x-FvswYHV2grvRQJCyiVZ6ycjv35sttdyDnGUn70znYumqyv0k_ryU6RP8vQOdny2WA7u-jQi_14AEZjap6vVVRXA3oU9d6i-2tf4SA_b58FX24wvOhIeNRudD3DsoMECMCqCZxX0sB1bYSHuVBVud8xj");'></div>
+<div class="flex flex-col bg-white rounded-lg shadow-sm overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group">
+<div class="relative w-full aspect-video">
+<img alt="Code Crafters Ltd. collaboration session" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7OAnniW25aM18wR_LY3lwb8BzvdLgtnRymUF7yvT8tAjn7VIOuU7_CPxjUDaVZU3EK_bwYmH6aXO4HmE1CT63ecNaazK53XdqvLRDkPU8UsR8KV9K5LF3Z579TFcyYCvwCo2V_198R2LR2XsxcKqKulTMREBTtsAJUz_mndjboAlVJD3Vh_RzSE3bENjPqm3mmxgp300FISWTS3BOG3PS3PTh6-8oSVUcDVQb7Y8sB0vkwJ6d_dtc-Ps8A6B5xHGft6O6_7LRUKEM"/>
 </div>
-<div class="md:col-span-3 flex flex-col gap-4">
-<div>
-<p class="text-rose-500 font-semibold leading-normal mb-1">2016 - 2018</p>
-<h3 class="text-2xl font-bold text-gray-900 leading-tight">Junior Designer at Design Studio Ltd.</h3>
-<p class="text-gray-600 text-base leading-relaxed mt-2">
-                      Supported senior designers in creating visual assets and prototypes. Contributed to the design of marketing materials and website redesigns.
-                    </p>
-</div>
-<a class="flex items-center gap-2 text-rose-500 font-bold leading-normal w-fit group/button" href="#">
-<span>Read More</span>
-<span class="material-symbols-outlined transition-transform duration-300 group-hover/button:translate-x-1"> arrow_forward </span>
+<div class="p-6 flex flex-col flex-1">
+<h3 class="text-lg font-semibold mb-2">Junior Developer at Code Crafters Ltd.</h3>
+<p class="text-gray-600 text-sm mb-4 flex-1">Contributed to the development of various software projects, gaining foundational experience in a collaborative environment.</p>
+<a class="inline-flex items-center gap-2 text-sm font-semibold text-[var(--primary-color)] group-hover:underline" href="#">
+                    Read More
+                    <span class="material-symbols-outlined text-base">arrow_forward</span>
 </a>
 </div>
 </div>
