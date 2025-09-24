@@ -1,78 +1,47 @@
-<div class="text-center mb-10">
-          <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900">연락하기</h1>
-          <p class="mt-4 text-lg text-gray-500">언제든지 연락 주세요. 아래 양식을 작성해 주시면 가능한 빨리 답변 드리겠습니다.</p>
-        </div>
-        
-        <form action="#" class="space-y-6" method="POST">
-          <div>
-            <label class="block text-sm font-medium text-gray-700" for="name">이름</label>
-            <div class="mt-1">
-              <input class="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-600 focus:ring-blue-600 sm:text-sm py-3 px-4 bg-white" id="name" name="name" placeholder="성함을 입력해주세요" type="text">
-            </div>
-          </div>
-          
-          <div>
-            <label class="block text-sm font-medium text-gray-700" for="email">이메일</label>
-            <div class="mt-1">
-              <input class="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-600 focus:ring-blue-600 sm:text-sm py-3 px-4 bg-white" id="email" name="email" placeholder="이메일 주소를 입력해주세요" type="email">
-            </div>
-          </div>
-          
-          <div>
-            <label class="block text-sm font-medium text-gray-700" for="subject">제목</label>
-            <div class="mt-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;900&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-<title>NA Minwon - Contact</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-      :root {
-        --primary-color: #3A86FF;
-        --secondary-color: #F6F6F6;
-      }
-      body {
-        font-family: "Noto Sans KR", "Plus Jakarta Sans", sans-serif;
-      }
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+        }
+        .card-gradient {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border: 1px solid #bfdbfe;
+        }
+        .card-white {
+            background: white;
+            border: 1px solid #e0f2fe;
+            box-shadow: 0 1px 3px 0 rgba(59, 130, 246, 0.1);
+        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-<div class="relative flex min-h-screen flex-col overflow-x-hidden">
-  <div class="layout-container flex h-full grow flex-col">
-    <header class="sticky top-0 z-10 bg-white/90 backdrop-blur-md border-b border-gray-200">
-      <div class="container mx-auto flex items-center justify-between whitespace-nowrap px-4 sm:px-6 lg:px-8 py-4">
-        <div class="flex items-center gap-3 text-gray-900">
-          <a class="flex items-center gap-3" href="index.html">
-            <svg class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_6_319)">
-                <path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
-              </g>
-              <defs>
-                <clipPath id="clip0_6_319">
-                  <rect fill="white" height="48" width="48"></rect>
-                </clipPath>
-              </defs>
-            </svg>
-            <h2 class="text-xl font-bold tracking-tight">나민원</h2>
-          </a>
+<body class="bg-white text-gray-800">
+    <header class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-200 py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                    NA
+                </div>
+                <h1 class="text-xl font-bold">NA Minwon</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-blue-600 font-semibold hover:text-blue-700 transition-colors">About me</a>
+                <a href="career.html" class="text-gray-600 hover:text-gray-900 transition-colors">Career</a>
+                <a href="contact.html" class="text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
+            </nav>
+            <button class="md:hidden p-2 rounded-md hover:bg-gray-100">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
         </div>
-        <nav class="hidden md:flex items-center gap-8">
-          <a class="text-gray-600 hover:text-gray-900 text-base font-medium transition-colors" href="index.html">소개</a>
-          <a class="text-gray-600 hover:text-gray-900 text-base font-medium transition-colors" href="career.html">경력</a>
-          <a class="text-blue-600 text-base font-bold" href="contact.html">연락처</a>
-        </nav>
-        <div class="flex items-center gap-4">
-          <button class="md:hidden flex items-center justify-center p-2 rounded-md hover:bg-gray-100">
-            <span class="material-symbols-outlined text-gray-800"> menu </span>
-          </button>
-        </div>
-      </div>
     </header>
-    
     <main class="flex flex-1 justify-center items-center py-16 px-4 sm:px-6 lg:px-8">
       <div class="w-full max-w-xl">
         <div class="text-center mb-10">
